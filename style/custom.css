@@ -1,0 +1,267 @@
+body {
+  background: rgba(70, 227, 255, 0.466);
+}
+.cloud-1 {
+  width: 260px;
+  animation-name: cloud-1;
+  animation-duration: 10s;
+  animation-delay: 2s;
+  animation-iteration-count: infinite;
+  position: relative;
+}
+.cloud-2 {
+  width: 120px;
+  margin-top: 20px;
+  animation-name: cloud-1;
+  animation-duration: 6s;
+  animation-delay: 2s;
+  animation-iteration-count: infinite;
+  position: relative;
+}
+@keyframes cloud-1 {
+  0% {
+    left: 0;
+  }
+  50% {
+    left: 90%;
+  }
+  100% {
+    left: 0;
+  }
+}
+.container {
+  height: 400px;
+  margin: 0 auto;
+  position: relative;
+}
+.ball-wrapper{
+  height: 0px;
+  width: 0px;
+  border-radius: 50%;
+  background: transparent;
+  position: absolute;
+  animation: container-ball;
+  animation-delay: 2s;
+  animation-duration: 10s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+  animation-timing-function: cubic-bezier(2.9,1.8,13.8,0);
+}
+.ball {
+  width: 120px;
+  height: 120px;
+  border-radius: 60px;
+  background: linear-gradient(65deg,  rgb(202, 129, 129) 1%,rgb(110, 197, 139) 99%);
+  box-shadow: 
+  inset 0 -5px 15px rgba(255,255,255,0.4),
+  inset -2px -1px 40px rgba(0,0,0,0.4),
+  0 0 1px #000;
+  position: absolute;
+  animation-name: rotation;
+  animation-direction: reverse;
+  animation-duration: 5s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+}
+.ball_shadow {
+  width: 120px;
+  height: 1px;
+  position: absolute;
+  bottom: 24px;
+  background: radial-gradient(circle at 50% 5%, rgb(26, 25, 25), rgba(5, 5, 5, 0.884));
+  animation-name: ball_shadow;
+  animation-duration: 10s;
+  animation-delay: 2s;
+  animation-iteration-count: infinite;
+}
+.ground {
+  width: 100vw;
+  height: 25px;
+  background: linear-gradient(45deg, #5be63f, #008000, #028302);
+  bottom: 0;
+  position: absolute;
+}
+ 
+@keyframes container-ball {
+  0% {
+    top: calc(100% - 145px);
+    left: 20%;
+  }
+  10% {
+    top: 10px;
+    left: 25%;
+  }
+  20% {
+    top: calc(100% - 145px);
+    left: 30%;
+  }
+  30% {
+      top: 20px;
+      left: 35%;
+  }
+  40% {
+      top: calc(100% - 145px);
+      left: 40%;
+  }
+  50% {
+      top: 35px;
+      left: 50%;
+  }
+  60% {
+      top: calc(100% - 145px);
+      left: 55%;
+  }
+  70% {
+      top: 45px;
+      left: 60%;
+  }
+  75% {
+      top: calc(100% - 145px);
+      left: 65%;
+  }
+  80% {
+      top: 60px;
+      left: 70%;
+  }
+  85% {
+      top: calc(100% - 145px);
+      left: 75%;
+  }
+  90% {
+    top: 75px;
+    left: 80%;
+  }
+  95% {
+    top: calc(100% - 145px);
+    left: 85%;
+  }
+  98% {
+    top: 100px;
+    left: 90%;
+  }
+  98% {
+    top: calc(100% - 145px);
+    left: 100%;
+  }
+}
+
+@keyframes rotation {
+  0% {
+    transform: rotate(0deg);
+    border-radius: 50% 50%;
+    animation-duration: 1s;
+  }
+  10% {
+    border-radius: 50% 50%;
+    animation-duration: 1s;
+  }
+  20% {
+    border-radius: 60% 50%;
+    animation-duration: 5s;
+  }
+  30% {
+    border-radius: 50% 50%;
+    animation-duration: 5s;
+  }
+  40% {
+    border-radius: 60% 50%;
+    animation-duration: 5s;
+  }
+  50% {
+    border-radius: 50% 50%;
+    animation-duration: 10s;
+  }
+  60% {
+    border-radius: 60% 50%;
+    animation-duration: 10s;
+  }
+   70% {
+    border-radius: 50% 50%;
+    animation-duration: 15s;
+  }
+    80% {
+    border-radius: 60% 50%;
+    animation-duration: 25s;
+  }
+  85% {
+    border-radius: 50% 50%;
+    animation-duration: 30s;
+  }
+  90% {
+    border-radius: 50% 50%;
+    animation-duration: none;
+  }
+  95% {
+    border-radius: 50% 50%;
+    animation-duration: none;
+  }
+  100% {
+    transform: rotate(360deg);
+    border-radius: 50% 50%;
+    animation-duration: none;
+  }
+}
+
+@keyframes ball_shadow {
+  0% {
+    left: 20%;
+    box-shadow: -1px -0.1px 20px 5px rgba(0, 0, 0, 0.692);
+  }
+  10% {
+    left: 25%;
+    box-shadow: 0px -1px 50px 5px rgba(0, 0, 0, 0.26);
+  }
+  20% {
+    left: 30%;
+    box-shadow: -1px -0.1px 20px 5px rgba(0, 0, 0, 0.692);
+  }
+  30% {
+      left: 35%;
+      box-shadow: 0px -1px 50px 5px rgba(0, 0, 0, 0.26);
+  }
+  40% {
+      left: 40%;
+      box-shadow: -1px -0.1px 20px 5px rgba(0, 0, 0, 0.692);
+  }
+  50% {
+      left: 50%;
+      box-shadow: 0px -1px 50px 5px rgba(0, 0, 0, 0.26);
+  }
+  60% {
+      left: 55%;
+      box-shadow: -1px -0.1px 20px 5px rgba(0, 0, 0, 0.692);
+  }
+  70% {
+      left: 60%;
+      box-shadow: 0px -1px 50px 5px rgba(0, 0, 0, 0.26);
+  }
+  75% {
+      left: 65%;
+      box-shadow: -1px -0.1px 20px 5px rgba(0, 0, 0, 0.692);
+  }
+  80% {
+      left: 70%;
+      box-shadow: 0px -1px 50px 5px rgba(0, 0, 0, 0.26);
+  }
+  85% {
+      left: 75%;
+      box-shadow: 0px -0.1px 20px 5px rgba(0, 0, 0, 0.692);
+  }
+  90% {
+    left: 80%;
+    box-shadow: 0px -1px 50px 5px rgba(0, 0, 0, 0.26);
+  }
+  95% {
+    left: 85%;
+    box-shadow: 0px -0.1px 20px 5px rgba(0, 0, 0, 0.692);
+  }
+  98% {
+    left: 90%;
+    box-shadow: 0px -1px 50px 5px rgba(0, 0, 0, 0.26);
+  }
+  98% {
+    left: 100%;
+    box-shadow: 0px -0.1px 20px 5px rgba(0, 0, 0, 0.692);
+  }
+}
+
